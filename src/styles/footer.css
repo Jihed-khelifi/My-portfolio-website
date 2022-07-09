@@ -1,0 +1,67 @@
+.bottom-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  color: beige;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+
+.bottom-footer .platforms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.bottom-footer .platforms .fab {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.bottom-footer .platforms .fa-github {
+  color: #6e5494;
+}
+
+.bottom-footer .platforms .fa-linkedin {
+  color: #548CFF;
+}
+
+.bottom-footer .platforms .fa-codepen {
+  color: #ffffff;
+}
+
+.custom-shape-divider-bottom-1648752550 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom-shape-divider-bottom-1648752550 svg {
+  position: relative;
+  display: block;
+  width: calc(132% + 1.3px);
+  height: 47px;
+}
+
+.custom-shape-divider-bottom-1648752550 .shape-fill {
+  fill: rgba(69, 75, 116, 0.288);
+}
+/*# sourceMappingURL=footer.css.map */

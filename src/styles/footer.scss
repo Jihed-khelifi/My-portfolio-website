@@ -1,0 +1,55 @@
+.bottom-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    color: beige;
+    bottom: 0;
+    padding-bottom: 20px;
+
+    .platforms {
+        display: flex;
+        gap: 30px;
+
+        .fab {
+            font-size: clamp(1.5rem, 2.0vw, 2.5rem);
+        }
+
+        .fa-github {
+            color: #6e5494;
+        }
+
+        .fa-linkedin {
+            color: #548CFF;
+        }
+
+        .fa-codepen {
+            color: #ffffff;
+        }
+    }
+}
+
+.custom-shape-divider-bottom-1648752550 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-bottom-1648752550 svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 47px;
+}
+
+.custom-shape-divider-bottom-1648752550 .shape-fill {
+    fill: rgba(69, 75, 116, 0.288);
+}

@@ -1,0 +1,23 @@
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+
+    .skill {
+        padding: 10px;
+        border-radius: 100px;
+        text-align: center;
+        position: relative;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .avaible {
+        background-color: #848484;
+    }
+
+    .unavaible {
+        background-color: #6e0808;
+    }
+}

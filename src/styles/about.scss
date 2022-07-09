@@ -1,0 +1,74 @@
+.about-wrapper {
+    position: relative;
+
+    .about-me-starter {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+
+        p {
+            text-align: center;
+            font-size: clamp(1.6rem, 2vw, 2rem);
+        }
+
+    }
+
+    .about-me-container {
+        display: grid;
+        grid-template-areas: 'first second'
+            'third second';
+    }
+
+    .game {
+        display: grid;
+        place-items: center;
+    }
+
+    .card {
+        // position: absolute;
+        background-color: #d29104;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px 10px;
+        max-width: 500px;
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+
+        &:nth-child(1) {
+            grid-area: first;
+        }
+
+        &:nth-child(2) {
+            grid-area: third;
+
+        }
+
+        &:nth-child(3) {
+            grid-area: second;
+        }
+
+    }
+
+    .hide {
+        transform: scale(0);
+        width: 0px;
+        height: 0px;
+
+    }
+
+}
+
+@media screen and (max-width : 850px) {
+    .about-me-container {
+        display: flex !important;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width : 502px) {
+    .about-me-starter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,32 @@
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 10px;
+}
+
+.skills .skill {
+  padding: 10px;
+  border-radius: 100px;
+  text-align: center;
+  position: relative;
+  background-color: black;
+}
+
+.skills .avaible {
+  background-color: #848484;
+}
+
+.skills .unavaible {
+  background-color: #6e0808;
+}
+/*# sourceMappingURL=game.css.map */
