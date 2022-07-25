@@ -2,9 +2,9 @@
   <footer class="bottom-footer">
     <p>You can also find me on other platforms</p>
     <div class="platforms">
-      <a href=""><i class="fab fa-github"></i></a>
-      <a href=""><i class=" fab fa-brands fa-linkedin"></i></a>
-      <a href=""><i class=" fab fa-brands fa-codepen"></i></a>
+      <a href="https://github.com/Jihed-khelifi"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jihed-khelifi-694522197/"><i class=" fab fa-brands fa-linkedin"></i></a>
+      <a href="https://codepen.io/jihed-khelifi" target="_blank"><i class=" fab fa-brands fa-codepen"></i></a>
     </div>
     <span>© 2022 Jihed KHELIFI | All rights reserved</span>
     <div class="custom-shape-divider-bottom-1648752550">
@@ -30,5 +30,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/footer.scss';
+@import '../../styles/footer.scss';
 </style>

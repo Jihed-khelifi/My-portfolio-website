@@ -18,14 +18,21 @@
 </template>
 <script setup>
 import { onMounted, ref } from 'vue';
-
+import gsap from 'gsap';
 const dropNav = ref(null)
 
 onMounted(() => {
+  gsap.from('.header-wrapper', {
+    duration: 1,
+    y: -100,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "bounce.out"
+  });
   dropNav.value.classList.add("fade-in")
 })
 
 </script>
 <style lang="scss" scoped>
-@import '../styles/header.scss';
+@import '../../styles/header.scss';
 </style> 

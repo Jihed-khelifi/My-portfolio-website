@@ -1,22 +1,16 @@
 .about-wrapper {
     position: relative;
-
-    .about-me-starter {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 20px;
-
-        p {
-            text-align: center;
-            font-size: clamp(1.6rem, 2vw, 2rem);
-        }
-
-    }
+    background-color: rgba(28, 28, 35, 0);
+    display: grid;
+    place-items: center;
+    padding: 50px 10px;
+    width: 100%;
 
     .about-me-container {
         display: grid;
         grid-template-areas: 'first second'
             'third second';
+        max-width: 1000px;
     }
 
     .game {
@@ -24,15 +18,20 @@
         place-items: center;
     }
 
+    .my-name {
+        color: #f7b42c;
+        text-transform: capitalize;
+    }
+
     .card {
-        // position: absolute;
-        background-color: #d29104;
+        background-color: beige;
         border-radius: 15px;
         padding: 10px;
         margin: 10px 10px;
         max-width: 500px;
         transform: scale(1);
         transition: transform 0.5s ease-in-out;
+        color: #35353C;
 
         &:nth-child(1) {
             grid-area: first;

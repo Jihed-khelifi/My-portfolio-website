@@ -1,0 +1,125 @@
+* {
+    user-select: none;
+}
+
+.app-service {
+    padding: 50px 0px;
+    position: relative;
+
+    display: grid;
+    place-items: center;
+    padding: 50px 10px;
+    width: 99%;
+    overflow: hidden;
+}
+
+.service-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .resume {
+        color: black;
+    }
+
+    h1 {
+        animation: animate-letter 1s ease-in-out;
+        background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+        background-clip: text;
+        animation: bg-animation 2s infinite alternate;
+        background-size: 400%;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: transparent;
+        max-width: 700px;
+        text-align: center;
+    }
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes animate-letter {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media screen and (max-width: 750px) {
+    .services-container {
+        flex-direction: column;
+        justify-content: last baseline;
+        width: 100%;
+    }
+}
+
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: beige;
+    border-radius: 15px;
+    min-height: 150px;
+}
+
+.service-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    .label {
+        font-size: 1.5rem;
+        color: #35353C;
+    }
+
+    #service-logo {
+        font-size: 1.5rem;
+        color: #35353C !important;
+    }
+}
+
+.service-content-description {
+    font-size: smaller;
+    font-weight: 400;
+    max-width: 250px;
+
+    p {
+        color: #35353C;
+    }
+}

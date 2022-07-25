@@ -1,9 +1,17 @@
 .btn {
     border-radius: 100px;
+    border: 0;
+    outline: none;
     padding: 5px 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: rgb(0, 0, 0);
-    background-color: #848484;
+    color: #35353C;
+    background-color: #f7b42c;
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }

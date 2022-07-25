@@ -8,16 +8,15 @@
                 <p>{{ text }}</p>
             </div>
             <div class="popup-button">
-                <button class="btn popup-button-close" @click="closePopup">Close</button>
+                <slot></slot>
             </div>
         </div>
     </dialog>
 </template>
 <script>
 export default {
-    props: ['title', 'text'],
+    props: ['title', 'text', 'buttonText'],
     setup() {
-
         return {
 
         }
@@ -25,19 +24,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../styles/general.scss';
-
-
+@import '../../styles/general.scss';
 
 .popup-container {
-
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 350px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(245, 245, 245);
     z-index: 100;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    outline: none;
 
     .popup-content {
         padding: 20px;
@@ -60,22 +60,10 @@ export default {
         }
 
         .popup-button {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             margin-top: 20px;
-
-            .popup-button-close {
-                background-color: #ff0000;
-                color: #fff;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
-
-                &:hover {
-                    background-color: #fff;
-                    color: #ff0000;
-                }
-            }
         }
     }
 }
