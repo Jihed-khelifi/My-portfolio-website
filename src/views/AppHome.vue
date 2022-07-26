@@ -1,5 +1,5 @@
 <template>
-  <section class="home-wrapper">
+  <section class="home-wrapper initial-responsive-container ">
     <div class="greeting-and-pic">
       <div class="img">
         <img class="picture" src="../assets/my-image.png" alt="My image">
@@ -33,6 +33,7 @@ const scrollAndShowServices = () => {
 }
 const startInteraction = () => {
   showAbout.value = true;
+  document.querySelector('.home-wrapper').classList.remove('initial-responsive-container')
 }
 onMounted(() => {
   // create a gsap animation to show the cards
