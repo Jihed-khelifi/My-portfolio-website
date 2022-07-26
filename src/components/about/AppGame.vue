@@ -23,12 +23,16 @@ const container = ref(null);
 const openPopUp = ref(false)
 const popUpText = ref('')
 const popUpTitle = ref('')
-const count = ref(0);
+var count = 0
 const GameOn = ref(true)
-const scrollAndOpenComp = () => {
-    openPopUp.value = false
-    window.scrollBy(0, 650)
 
+const scrollAndOpenComp = () => {
+    window.scrollBy({
+        top: window.innerHeight,
+        left: 0,
+        behavior: 'smooth'
+    });
+    openPopUp.value = false
 }
 
 const explode = (x, y, target) => {
@@ -58,26 +62,34 @@ const explode = (x, y, target) => {
         explosion.appendChild(particle)
     }
 }
+var skillCollection = []
 const checkLang = (lang) => {
-    let skill = mySkills.find(mySkill => mySkill.name === lang.target.innerText);
+    let skill = mySkills.find(mySkill => lang.target.innerText.includes(mySkill.name));
     if (skill.available) {
-        count.value++;
-        if (count.value === numberOfAvailableSkills) {
-            popUpText.value = "In the next game only let service's label to get closer to the dot in the center"
+        if (count === numberOfAvailableSkills) {
+            popUpText.value = "In the next game only let service's label get closer to the white dot"
             popUpTitle.value = 'Hurray! you figured them out!'
+            document.querySelectorAll('.skill:not(.available)').forEach(skill => {
+                skill.remove()
+            })
             openPopUp.value = true;
             GameOn.value = false;
+            return
         }
-        lang.target.classList.add('avaible');
-        const levelIndicator = document.createElement('span');
-        levelIndicator.classList.add('level-indicator');
-        levelIndicator.innerText = skill.level;
-        lang.target.appendChild(levelIndicator);
-        levelIndicator.classList.add('show-level');
-        lang.target.removeEventListener('click', checkLang)
+        if (!skillCollection.includes(skill)) {
+            skillCollection.push(skill)
+            lang.target.classList.add('available');
+            const levelIndicator = document.createElement('span');
+            levelIndicator.classList.add('level-indicator');
+            levelIndicator.innerText = skill.level;
+            lang.target.appendChild(levelIndicator);
+            levelIndicator.classList.add('show-level');
+            lang.target.removeEventListener('click', checkLang)
+            count++;
+        }
     } else {
         explode(lang.clientX, lang.clientY, lang.target);
-        lang.target.classList.add('unavaible');
+        lang.target.classList.add('unavailable');
         setTimeout(() => {
             lang.target.remove();
         }, 700);
@@ -91,7 +103,7 @@ const displaySkills = () => {
 
         el.addEventListener('click', (e) => {
             checkLang(e)
-            el.removeEventListener('click', checkLang)
+            el.removeEventListener('click', checkLang(e))
         });
         container.value.appendChild(el);
     })
