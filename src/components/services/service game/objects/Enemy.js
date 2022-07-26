@@ -1,16 +1,12 @@
 import Service from "./Service";
-import Game from "../Game";
-import GameManager from "./GameManager";
 export default class Enemy {
     constructor(x, y, radius, color, velocity) {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.color = 'red';
+        this.color = color;
         this.velocity = velocity;
         this.enemies = [];
-        this.gameManager = new GameManager();
-        this.game = new Game();
     }
     draw(ctx) {
         ctx.beginPath();
