@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 10px;
+    padding: 20px 10px;
     gap: 10px;
 
     .about-me-starter {
@@ -19,6 +19,8 @@
         }
 
     }
+
+
 
     .greeting-and-pic {
         display: flex;
@@ -55,11 +57,8 @@
     }
 }
 
-
-@media screen and (max-width : 700px) {
-    .home-wrapper {
-        margin-bottom: 150px;
-    }
+.initial-responsive-container {
+    padding-bottom: 200px;
 }
 
 @keyframes bg-animation {
