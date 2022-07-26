@@ -34,14 +34,14 @@
             </div>
 
             <div ref="card" class="card game">
-                <Game @next-comp="$emit('triggerComp')" />
+                <SkillGame @next-comp="$emit('triggerComp')" />
 
             </div>
         </div>
     </section>
 </template>
 <script setup>
-import Game from './AppGame.vue'
+import SkillGame from './AppSkillGame.vue'
 import { ref, onMounted } from 'vue'
 import AppPopUp from '../layout/AppPopUp.vue'
 import gsap from 'gsap'
