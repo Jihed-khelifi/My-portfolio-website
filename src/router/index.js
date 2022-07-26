@@ -9,26 +9,33 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: "Jihed Khelifi Full-Stack Web Developer"
+    }
   },
   {
     path: "/contact",
     name: "Contact",
-    component: Contact
+    component: Contact,
+    meta: {
+      title: "Contact Me"
+    }
   },
   {
     path: "/projects",
     name: "Projects",
-    component: MyWork
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: About
+    component: MyWork,
+    meta: {
+      title: "Under Construction"
+    }
   },
   {
     path: "/articles",
     name: "Articles",
     component: Articles,
+    meta: {
+      title: "Under Construction"
+    }
   }
 ];
 
