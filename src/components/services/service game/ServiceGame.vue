@@ -167,6 +167,7 @@ watch(gameStateChanges, (newValue, oldValue) => {
 //  onMounted ///////////////////// 
 onMounted(() => {
     gameStateChanges.value++;
+    // window.scrollBy(0, innerHeight);
 });
 </script>
 <style lang="scss" scoped>
