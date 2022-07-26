@@ -1,6 +1,6 @@
 <template>
     <keep-alive>
-        <AppPopUp v-show="showModal" title="Oops! " @close-modal="showModal = false" text="Do want to play again ?"
+        <AppPopUp v-show="showModal" title="Oops! " @close-modal="showModal = false" text="Do you want to play again ?"
             buttonText="Resume">
             <button class="btn" ref="replayButton" @click="replay">Yup!</button>
             <button class="btn" @click="$emit('gameWon', true)">No, Skip</button>
