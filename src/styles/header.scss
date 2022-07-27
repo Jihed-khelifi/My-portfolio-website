@@ -1,14 +1,7 @@
-@use '_colors.scss';
-
 .header-wrapper {
   font-size: clamp(0.9rem, 2.0vw, 2.5rem);
   flex: 1;
   width: 100%;
-
-
-  // .fade-in {
-  //   animation: fade-in 1s ease-in-out;
-  // }
 
   .container {
     display: flex;
@@ -54,68 +47,5 @@
       color: beige;
     }
 
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  5% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  15% {
-    transform: translateY(0);
-    padding-bottom: 5px;
-  }
-
-  30% {
-    transform: translateY(-50%);
-  }
-
-  40% {
-    transform: translateY(0%);
-    padding-bottom: 6px;
-  }
-
-  50% {
-    transform: translateY(-30%);
-  }
-
-  70% {
-    transform: translateY(0%);
-    padding-bottom: 7px;
-  }
-
-  80% {
-    transform: translateY(-15%);
-  }
-
-  90% {
-    transform: translateY(0%);
-    padding-bottom: 8px;
-  }
-
-  95% {
-    transform: translateY(-7%);
-  }
-
-  97% {
-    transform: translateY(0%);
-    padding-bottom: 9px;
-  }
-
-  99% {
-    transform: translateY(-3%);
-  }
-
-  100% {
-    transform: translateY(0);
-    padding-bottom: 0px;
-    opacity: 1;
   }
 }
