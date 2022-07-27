@@ -29,7 +29,6 @@ onMounted(() => {
     stagger: 0.2,
     ease: "bounce.out"
   });
-  dropNav.value.classList.add("fade-in")
 })
 
 </script>

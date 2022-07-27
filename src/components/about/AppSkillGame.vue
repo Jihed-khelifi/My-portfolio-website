@@ -16,9 +16,8 @@
 import { mySkills, numberOfAvailableSkills } from '../../constants/skills';
 import { ref, onMounted } from 'vue';
 import AppPopUp from '../layout/AppPopUp.vue';
-import gsap from 'gsap';
 
-const skills = mySkills
+const skills = mySkills.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value)
 const container = ref(null);
 const openPopUp = ref(false)
 const popUpText = ref('')
@@ -47,7 +46,8 @@ const explode = (x, y, target) => {
 
         let y = explosion.offsetHeight / 2 + rand(80, 160) * Math.cos((2 * Math.PI * i) / rand(particles - 10, particles + 10))
 
-        let color = '#' + Math.floor(Math.random() * 16777215).toString(16)
+        // let color = '#' + Math.floor(Math.random() * 16777215).toString(16)
+        let color = '#848484'
 
         const particle = document.createElement('div')
         particle.classList.add('particle')
@@ -67,8 +67,8 @@ const checkLang = (lang) => {
     let skill = mySkills.find(mySkill => lang.target.innerText.includes(mySkill.name));
     if (skill.available) {
         if (count === numberOfAvailableSkills) {
-            popUpText.value = "In the next game only let service's label get closer to the white dot"
             popUpTitle.value = 'Hurray! you figured them out!'
+            popUpText.value = "In the next section, click on the balls to not let them approach the white dot."
             document.querySelectorAll('.skill:not(.available)').forEach(skill => {
                 skill.remove()
             })

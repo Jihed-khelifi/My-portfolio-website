@@ -1,10 +1,10 @@
 <template>
     <div class="service-wrapper">
         <h1 v-if="hasSkipped">
-            Here is a brief overview of my services
+            Here is a brief overview of my services.
         </h1>
         <h1 v-else>
-            Good job! here is a brief overview of my services
+            Good job! here is a brief overview of my services.
         </h1>
         <div class="services-container">
             <div v-for="(service, index) in services" :key="index" class="service ">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <a :href="`${publicPath}resume.pdf`" download="download" class="btn resume">Download my
+        <a :href="`${publicPath}resume.pdf`" download="Khelifi's resume" class="btn resume">Download my
             resume</a>
     </div>
 </template>

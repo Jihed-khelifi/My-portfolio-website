@@ -34,7 +34,7 @@ export default {
     max-width: 350px;
     background-color: rgba(245, 245, 245);
     z-index: 100;
-    color: black;
+    color: #35353C;
     border-radius: 10px;
     border: none;
     outline: none;

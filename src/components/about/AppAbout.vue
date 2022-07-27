@@ -9,10 +9,10 @@
         <div ref="cards" class="about-me-container">
             <div ref="card" class="card greeting">
                 <h2 class="">
-                    Hello, I'm
-                    I am a full-stack web developer.
+                    Hello,
+                    I am a Full-Stack web developer.
                 </h2>
-                <p>I develop websites with love, integrity and art in mind</p>
+                <p>I develop websites with love, integrity and art in mind.</p>
                 <button ref="getToKnowMeBtnVisible" @click="() => {
                     getToKnowMeBtnVisible.style.display = 'none';
                     showCard(1)
@@ -21,8 +21,11 @@
             <div ref="card" class="card basic-info">
                 <h2 class="know-me">Get to know me</h2>
                 <p>
-                    my name is <span class="my-name">Jihed Khelifi</span> and I am a full-stack web developer based in
-                    Sousse Tunisia, I have a
+                    My name is <span class="my-name">Jihed Khelifi</span>, I am a 23 years old Full Stack
+                    web developer
+                    based
+                    in
+                    Tunisia Sousse, I have a
                     passion for creating beautiful and functional websites.
                     I am currently working as a freelancer in web development.
 
@@ -44,9 +47,6 @@
 import SkillGame from './AppSkillGame.vue'
 import { ref, onMounted } from 'vue'
 import AppPopUp from '../layout/AppPopUp.vue'
-import gsap from 'gsap'
-
-
 const openPopUp = ref(false)
 const starter = ref(null)
 const card = ref(null);
@@ -61,7 +61,7 @@ const hideCards = () => {
 }
 const StartGame = () => {
     popUpTitle.value = 'What are My skills ?'
-    popUpText.value = 'Try to guess my skills by clicking on them'
+    popUpText.value = 'Try to guess my skills by clicking on them.'
     openPopUp.value = true
     showCard(2);
     cards.value.childNodes[2].style.transform = 'none'

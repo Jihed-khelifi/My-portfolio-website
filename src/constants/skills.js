@@ -9,11 +9,6 @@ export const mySkills = [
         level: '70%',
         available: true
     },
-    {
-        name: 'Flutter',
-        level: '65%',
-        available: true
-    },
 
     {
         name: 'NodeJS',
@@ -23,7 +18,7 @@ export const mySkills = [
     {
         name: 'PHP',
         level: '55%',
-        available: true
+        available: false
     },
     {
         name: 'JavaScript',
@@ -54,6 +49,11 @@ export const mySkills = [
         name: 'Swift',
         level: '0',
         available: false
+    },
+    {
+        name: 'Flutter',
+        level: '65%',
+        available: true
     },
     {
         name: 'Perl',
