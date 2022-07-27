@@ -8,10 +8,21 @@
   </section>
 </template>
 
-<script>
-export default {
+<script setup>
+import { onMounted } from 'vue';
+import gsap from 'gsap';
+onMounted(() => {
+  gsap.from('.article-wrapper', {
+    duration: 1,
+    opacity: 0,
+    y: -100,
+    ease: 'power3.out',
+    stagger: {
+      amount: 0.5
+    }
+  })
+})
 
-};
 </script>
 
 <style lang="scss" scoped>

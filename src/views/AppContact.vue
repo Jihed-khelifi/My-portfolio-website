@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="get-in-touch">
-      <p>If you here to get in touch with me please do so below. I am actively looking for new
+      <p>If you are here to get in touch with me please do so below. I am actively looking for new
         interesting projects and
         opportunities to work on.
       </p>
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import gsap from 'gsap';
 
 const sendEmail = () => {

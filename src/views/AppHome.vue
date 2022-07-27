@@ -28,15 +28,28 @@ import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 const showAbout = ref()
 const showServices = ref(false);
+var buttonPulse
 const scrollAndShowServices = () => {
   showServices.value = true;
 }
 const startInteraction = () => {
   showAbout.value = true;
+  buttonPulse.pause();
   document.querySelector('.home-wrapper').classList.remove('initial-responsive-container')
 }
+
 onMounted(() => {
-  // create a gsap animation to show the cards
+
+  // create a gsap pulsing animation for the button
+  buttonPulse = gsap.fromTo('.start-interaction-btn', {
+    scale: 0.9,
+  }, {
+    repeat: -1,
+    scale: 1.1,
+    ease: 'power3.out',
+  })
+  buttonPulse.play()
+
   gsap.from('.greeting-and-pic', {
     duration: 1,
     opacity: 0,
