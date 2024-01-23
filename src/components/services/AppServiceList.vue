@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <a :href="`${publicPath}resume.pdf`" download="Khelifi's resume" class="btn resume">Download my
+        <a :href="`${publicPath}KHELIFI's Resume.pdf`" download="Khelifi's resume" class="btn resume">Download my
             resume</a>
     </div>
 </template>

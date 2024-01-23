@@ -1,21 +1,21 @@
 export const services = [
     {
         label: 'Front End',
-        description: 'I integrate with the front end stack to create a beautiful, responsive user interface.',
+        description: 'I use frontend technologies to create a reliable, maintainable and scalable.',
         logo: 'fa-solid fa-brush'
     },
     {
         label: 'Back End',
-        description: 'I integrate with the back end stack to create a robust, scalable application.',
+        description: 'I build robust and scalable APIs with the server side technologies.',
         logo: 'fa-solid fa-server'
     },
     {
-        label: 'full stack',
-        description: 'I build a websites from scratch with the front end and back end stack to create a robust, scalable application.',
+        label: 'Full stack',
+        description: 'I build a websites from scratch with the frontend and backend technologies.',
         logo: 'fa-solid fa-cubes-stacked'
     },
     {
-        label: 'maintenance',
+        label: 'Maintenance',
         description: 'I maintain the application to ensure it is running at peak performance.',
         logo: 'fa-solid fa-tools'
     },
@@ -24,8 +24,8 @@ export const services = [
         description: 'I design the user interface with integrity and art in mind while keeping it responsive and accessible.',
         logo: 'fa-solid fa-paint-brush'
     }, {
-        label: 'Development',
-        description: 'I develop the application with clean, scalable and reliable code.',
+        label: 'Deployment',
+        description: 'I deploy the application to the cloud to ensure it is accessible to everyone.',
         logo: 'fa-solid fa-code'
     }
 

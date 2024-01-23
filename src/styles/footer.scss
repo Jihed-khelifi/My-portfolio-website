@@ -13,6 +13,8 @@
 
     .platforms {
         display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 30px;
 
         .fab {
@@ -29,6 +31,9 @@
 
         .fa-codepen {
             color: #ffffff;
+        }
+        .fa-upwork {
+            color: #6fda44;
         }
     }
 }

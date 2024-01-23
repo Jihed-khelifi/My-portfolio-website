@@ -2,7 +2,7 @@
   <section class="home-wrapper initial-responsive-container ">
     <div class="greeting-and-pic">
       <div class="img">
-        <img class="picture" src="../assets/my-image.png" alt="My image">
+        <img class="picture" src="../assets/myself.jpg" alt="My image">
       </div>
       <div class="greeting">
         <p>Welcome to my realm</p>
@@ -10,7 +10,7 @@
     </div>
     <div ref="starter" class="about-me-starter">
       <p>Click to dive into my world</p>
-      <button @click="startInteraction" class="btn start-interaction-btn">let's do it</button>
+      <button @click="startInteraction" class="btn start-interaction-btn">Show me what you got!</button>
     </div>
   </section>
   <keep-alive>
